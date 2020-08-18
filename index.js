@@ -1,4 +1,5 @@
 const {setVibrancy: wSetVibrancy, disableVibrancy: wDisableVibrancy} = require("bindings")("vibrancy-wrapper");
+
 const os = require("os");
 const eBrowserWindow = require("electron").BrowserWindow;
 const {nativeTheme, screen} = require("electron");
@@ -34,6 +35,7 @@ class vBrowserWindow extends eBrowserWindow {
         props.backgroundColor = '#00000000';
         props.show = false;
         const win = new eBrowserWindow(props);
+        if (!isWindows10()) return eBrowserWindow; // Return an "official" BrowserWindow
         vBrowserWindow._bindAndReplace(win, vBrowserWindow.setVibrancy);
 
         let pollingRate = 0;
@@ -157,4 +159,4 @@ function disableVibrancy(win) {
 
 exports.setVibrancy = setVibrancy;
 exports.disableVibrancy = disableVibrancy;
-exports.BrowserWindow = vBrowserWindow;
+exports.BrowserWindow = isWindows10() ? vBrowserWindow : eBrowserWindow;

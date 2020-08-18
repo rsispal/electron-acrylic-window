@@ -1,10 +1,16 @@
 # electron-acrylic-window
 
-<img alt="logo" src="./logo.png" width="250"> 
-  
+<img alt="logo" src="./logo.png" width="250">
+
 [![Build Status](https://travis-ci.com/seo-rii/electron-acrylic-window.svg?branch=master)](https://travis-ci.com/seo-rii/electron-acrylic-window)
-[![Dependencies](https://david-dm.org/seo-rii/electron-acrylic-window.svg)](https://david-dm.org/seo-rii/electron-acrylic-window) 
+[![Dependencies](https://david-dm.org/seo-rii/electron-acrylic-window.svg)](https://david-dm.org/seo-rii/electron-acrylic-window)
 [![npm version](https://badge.fury.io/js/electron-acrylic-window.svg)](https://badge.fury.io/js/electron-acrylic-window)  
+
+
+> FORKED FROM [Seo-Rii/display-info](https://github.com/Seo-Rii/electron-acrylic-window)  
+> Changes by `@rsispal`
+
+
 
 Simply add vibrancy effect to Electron application on Windows.
 
@@ -88,7 +94,7 @@ This function will call ```win.setVibrancy(null)``` if os is not Windows 10.
 
 Clone this repository;
 ```bash
-git clone https://github.com/Seo-Rii/electron-acrylic-window.git
+git clone https://github.com/rsispal/electron-acrylic-window.git
 ```
 
 Install dependencies;
